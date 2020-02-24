@@ -10,7 +10,7 @@ class Student {
 	String studentEmail;
 	String studentUsername;
 	String studentPassword;
-	String course;
+	Course course;
 
 
 

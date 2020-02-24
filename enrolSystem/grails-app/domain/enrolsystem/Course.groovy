@@ -4,7 +4,7 @@ class Course {
 
 	String department;
 	String courseTitle;
-	String courseLeader;
+	Lecturer courseLeader;
 	String courseCode;
 
 	Date startDate;
@@ -13,6 +13,12 @@ class Course {
 	int numberOfStudents;
 	double tuitionFees;
 	String studyMode;
+	String toString(){
+	return courseTitle
+	}
+
+	static hasMany=[lecturers: Lecturer]
+
     static constraints = {
 
 	department nullable: false, blank: false
