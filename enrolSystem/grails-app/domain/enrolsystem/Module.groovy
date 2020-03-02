@@ -1,13 +1,15 @@
 package enrolsystem
 
 class Module {
-
+	static belongsTo = Lecturer
+	
 
 	String module_title;
 	String module_code;
 	int credits;
-	String lecturer;
+	Lecturer lecturer;
 	String description;
+	
 
 
 

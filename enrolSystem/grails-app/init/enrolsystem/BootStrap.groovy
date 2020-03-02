@@ -28,7 +28,7 @@ class BootStrap {
 	def Computing=new Course(
 	department: 'Computing',
 	courseTitle: 'Computing',
-	courseLeader: Charles,
+	leader: 'Charles',
 	courseCode: 'G504',
 
 	startDate:new Date('22/5/2020'),
@@ -46,7 +46,7 @@ class BootStrap {
 	def Art=new Course(
 	department: 'Art',
 	courseTitle: 'Art Applied',
-	courseLeader: Tondari,
+	leader: 'Tondari',
 	courseCode: 'G14',
 
 	startDate:new Date('22/5/2020'),
@@ -109,22 +109,22 @@ class BootStrap {
 	module_title: 'Web Analytics',
 	module_code: '617',
 	credits: '20',
-	lecturer: 'Mick',
-	course: 'Computing',
+	lecturer: Charles,
+	course: Computing,
 	description: 'A fun web Development Module').save()
+	if(WA.hasErrors()){
+	print1n WA.errors}
 
 	def PCP=new Module(
 	module_title: 'Professional Computing Project',
 	module_code: '371',
 	credits: '40',
-	lecturer: 'Charles',
-	course: 'Computing',
+	lecturer: Charles,
+	course: Computing,
 	description: 'Well this module exists anyway').save()
 
 	Charles.addToModules(PCP)
 	Charles.addToModules(WA)
-	Computing.addToLecturers(Charles)
-	Charles.addToCourses(Art)
 
     }
     def destroy = {

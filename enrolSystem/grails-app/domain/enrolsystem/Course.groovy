@@ -4,7 +4,7 @@ class Course {
 
 	String department;
 	String courseTitle;
-	Lecturer courseLeader;
+	String leader;
 	String courseCode;
 
 	Date startDate;
@@ -17,13 +17,12 @@ class Course {
 	return courseTitle
 	}
 
-	static hasMany=[lecturers: Lecturer]
 
     static constraints = {
 
 	department nullable: false, blank: false
 	courseTitle nullable: false, blank: false
-	courseLeader nullable: false, blank: false
+	leader nullable: false, blank: false
 	courseCode nullable: false, blank: false
 
 	startDate nullable: false, blank: false
